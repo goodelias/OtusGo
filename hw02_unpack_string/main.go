@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	result, err := Unpack("f33")
+	result, err := Unpack("")
 	if err != nil {
 		fmt.Println(err)
 		return
