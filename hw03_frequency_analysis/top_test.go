@@ -47,6 +47,9 @@ func TestTop10(t *testing.T) {
 	t.Run("no words in empty string", func(t *testing.T) {
 		require.Len(t, Top10(""), 0)
 	})
+	t.Run("less than 10 words", func(t *testing.T) {
+		require.Len(t, Top10("один два три два один"), 3)
+	})
 
 	t.Run("positive test", func(t *testing.T) {
 		if taskWithAsteriskIsCompleted {
